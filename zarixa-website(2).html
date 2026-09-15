@@ -96,8 +96,8 @@ p{margin:0}
     radial-gradient(90% 70% at 8% 92%,rgba(21,41,76,.42),transparent 60%);}
 
 /* ---------- 3. TYPE ---------- */
-.d0{font-size:clamp(56px,15.5vw,244px);font-variation-settings:'wdth' 116,'wght' 800;
-  text-transform:uppercase;line-height:.82;letter-spacing:-.045em}
+.d0{font-size:clamp(44px,11.5vw,175px);font-variation-settings:'wdth' 116,'wght' 800;
+  text-transform:uppercase;line-height:.84;letter-spacing:-.04em}
 .d1{font-size:clamp(38px,6.4vw,104px);font-variation-settings:'wdth' 110,'wght' 800;text-transform:uppercase}
 .d2{font-size:clamp(30px,4.4vw,70px);font-variation-settings:'wdth' 106,'wght' 800;text-transform:uppercase}
 .d3{font-size:clamp(22px,2.5vw,38px);font-variation-settings:'wdth' 102,'wght' 700;text-transform:uppercase}
@@ -271,14 +271,26 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
 .origin__eye{opacity:0;transform:translateY(8px);transition:opacity .8s var(--e) .15s,transform .8s var(--e) .15s}
 .origin.in .origin__eye{opacity:1;transform:none}
 .wordmark{margin:clamp(14px,2vw,26px) 0 0;position:relative}
-.wordmark h1{display:flex;flex-wrap:nowrap}
+.wordmark h1{display:flex;flex-wrap:wrap;gap:0 clamp(16px,2.5vw,48px)}
+.wordmark .word{display:inline-flex}
 .wordmark .l{display:block;overflow:hidden}
 .wordmark .l i{display:block;font-style:normal;transform:translate(-.14em,108%);
   transition:transform 1.15s var(--e)}
 .origin.in .wordmark .l i{transform:translate(0,0)}
-.wordmark .l:nth-child(1) i{transition-delay:.02s}.wordmark .l:nth-child(2) i{transition-delay:.07s}
-.wordmark .l:nth-child(3) i{transition-delay:.12s}.wordmark .l:nth-child(4) i{transition-delay:.17s}
-.wordmark .l:nth-child(5) i{transition-delay:.22s}.wordmark .l:nth-child(6) i{transition-delay:.27s}
+.wordmark .word:nth-child(1) .l:nth-child(1) i{transition-delay:.02s}
+.wordmark .word:nth-child(1) .l:nth-child(2) i{transition-delay:.06s}
+.wordmark .word:nth-child(1) .l:nth-child(3) i{transition-delay:.10s}
+.wordmark .word:nth-child(1) .l:nth-child(4) i{transition-delay:.14s}
+.wordmark .word:nth-child(1) .l:nth-child(5) i{transition-delay:.18s}
+.wordmark .word:nth-child(1) .l:nth-child(6) i{transition-delay:.22s}
+.wordmark .word:nth-child(2) .l:nth-child(1) i{transition-delay:.26s}
+.wordmark .word:nth-child(2) .l:nth-child(2) i{transition-delay:.30s}
+.wordmark .word:nth-child(2) .l:nth-child(3) i{transition-delay:.34s}
+.wordmark .word:nth-child(2) .l:nth-child(4) i{transition-delay:.38s}
+.wordmark .word:nth-child(2) .l:nth-child(5) i{transition-delay:.42s}
+.wordmark .word:nth-child(2) .l:nth-child(6) i{transition-delay:.46s}
+.wordmark .word:nth-child(2) .l:nth-child(7) i{transition-delay:.50s}
+.wordmark .word:nth-child(2) .l:nth-child(8) i{transition-delay:.54s}
 .origin__row{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;
   gap:clamp(24px,4vw,64px);margin-top:clamp(16px,2.2vw,30px)}
 .origin__line{font-family:var(--display);font-size:clamp(21px,2.5vw,40px);font-weight:700;
@@ -350,7 +362,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
   background:radial-gradient(circle at 50% 38%,var(--steel),var(--void) 74%);
   border:1px solid rgba(77,163,255,.32);box-shadow:0 0 70px -12px rgba(30,107,230,.55);
   transition:transform .8s var(--e),box-shadow .8s var(--e)}
-.eco__core span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--on)}
+.eco__core span{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--on);text-align:center;max-width:88px;line-height:1.3}
 .eco.picked .eco__core{transform:translate(-50%,-50%) scale(.82);box-shadow:0 0 46px -16px rgba(30,107,230,.4)}
 .node{position:absolute;left:50%;top:50%;width:0;height:0}
 .node button{position:absolute;display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px;
@@ -485,7 +497,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
 .foot__c h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--terra);font-weight:500;margin-bottom:18px}
 .foot__c ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.foot__c a,.foot__c li{font-size:14px;color:var(--coffee-dim)}
+.foot__c a,.foot__c li{font-size:14px;color:var(--coffee-dim);word-break:break-word}
 .foot__c a{transition:color .3s var(--e)}
 .foot__c a:hover{color:var(--coffee)}
 .foot__base{margin-top:clamp(42px,5vw,70px);padding-top:20px;border-top:1px solid rgba(42,32,24,.18);
@@ -519,7 +531,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
   .nav__links,.nav .btn{display:none}
   .burger{display:block}
   .mprog{display:block}
-  .d0{font-size:clamp(52px,17vw,110px)}
+  .d0{font-size:clamp(38px,12.5vw,84px)}
   .origin__row{flex-direction:column;align-items:flex-start}
   .origin__foot{flex-direction:column;align-items:flex-start;gap:16px}
   .scr{display:none}
@@ -584,7 +596,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
       <a href="#craft" data-spy="craft">Craft</a>
       <a href="#beyond" data-spy="beyond">Beyond</a>
     </nav>
-    <a class="btn" href="#close"><span>Let’s talk</span><i>→</i></a>
+    <a class="btn" href="mailto:zarixainfobytzpvtltd@gmail.com"><span>Let’s talk</span><i>→</i></a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
   </div>
 </header>
@@ -608,8 +620,9 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
     <p class="mark origin__eye"><b>Zarixa Infobytz Pvt Ltd</b> <span>— Bengaluru, India</span></p>
 
     <div class="wordmark">
-      <h1 class="d0" aria-label="Zarixa">
-        <span class="l" aria-hidden="true"><i>Z</i></span><span class="l" aria-hidden="true"><i>A</i></span><span class="l" aria-hidden="true"><i>R</i></span><span class="l" aria-hidden="true"><i>I</i></span><span class="l" aria-hidden="true"><i>X</i></span><span class="l" aria-hidden="true"><i>A</i></span>
+      <h1 class="d0" aria-label="Zarixa Infobytz">
+        <span class="word"><span class="l" aria-hidden="true"><i>Z</i></span><span class="l" aria-hidden="true"><i>A</i></span><span class="l" aria-hidden="true"><i>R</i></span><span class="l" aria-hidden="true"><i>I</i></span><span class="l" aria-hidden="true"><i>X</i></span><span class="l" aria-hidden="true"><i>A</i></span></span>
+        <span class="word"><span class="l" aria-hidden="true"><i>I</i></span><span class="l" aria-hidden="true"><i>N</i></span><span class="l" aria-hidden="true"><i>F</i></span><span class="l" aria-hidden="true"><i>O</i></span><span class="l" aria-hidden="true"><i>B</i></span><span class="l" aria-hidden="true"><i>Y</i></span><span class="l" aria-hidden="true"><i>T</i></span><span class="l" aria-hidden="true"><i>Z</i></span></span>
       </h1>
     </div>
 
@@ -637,7 +650,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
     <p class="mark"><b>02</b> <span>— System</span></p>
     <div class="system__grid">
       <h2 class="d1"><span class="q" data-rv="wipe">A launch is a moment.</span><span data-rv="wipe" data-d="1">An orbit is a system.</span></h2>
-      <p class="system__note" data-rv="rise" data-d="2">Most things don’t fail at the idea. They fail in the second month, when nothing is holding the weight. Zarixa exists for the part after the idea — the architecture, the interfaces, the operations and the brand that keep a product moving once the excitement wears off.</p>
+      <p class="system__note" data-rv="rise" data-d="2">Most things don’t fail at the idea. They fail in the second month, when nothing is holding the weight. Zarixa Infobytz exists for the part after the idea — the architecture, the interfaces, the operations and the brand that keep a product moving once the excitement wears off.</p>
     </div>
   </div>
 </section>
@@ -686,7 +699,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
           <g id="mesh" class="eco__mesh" mask="url(#mfade)"></g>
           <g id="cords"></g>
         </svg>
-        <div class="eco__core"><span>ZARIXA</span></div>
+        <div class="eco__core"><span>ZARIXA INFOBYTZ</span></div>
         <div class="node" data-i="0"><button type="button" data-cur="enter" aria-controls="pn0"><span class="g"></span><span class="n">EzeePrints</span></button></div>
         <div class="node node--open" data-i="1"><button type="button" data-cur="enter" aria-controls="pn1"><span class="g"></span><span class="n">Next orbit</span></button></div>
       </div>
@@ -695,12 +708,12 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
         <article class="eco__pn on" id="pn0">
           <span class="state">In pilot</span>
           <h3>EzeePrints</h3>
-          <p>Campus print-on-demand. A student sends a file from their phone; a print shop on the same street prints it and has it waiting. Zarixa designed the product, built the platform and runs the partner side of the network.</p>
+          <p>Campus print-on-demand. A student sends a file from their phone; a print shop on the same street prints it and has it waiting. Zarixa Infobytz designed the product, built the platform and runs the partner side of the network.</p>
           <a class="btn" href="#proof" data-cur="view"><span>Read the case</span><i>→</i></a>
           <dl class="eco__meta">
             <div><dt>Sector</dt><dd>Campus commerce</dd></div>
             <div><dt>Surfaces</dt><dd>Web · Android · iOS</dd></div>
-            <div><dt>Role</dt><dd>Built &amp; operated by Zarixa</dd></div>
+            <div><dt>Role</dt><dd>Built &amp; operated by Zarixa Infobytz</dd></div>
           </dl>
         </article>
         <article class="eco__pn" id="pn1">
@@ -838,7 +851,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
   <div class="wrap">
     <p class="mark"><b>07</b> <span>— Beyond</span></p>
     <div class="beyond__grid">
-      <h2 class="d1" data-rv="wipe">Zarixa is<br>not finished.</h2>
+      <h2 class="d1" data-rv="wipe">Zarixa Infobytz is<br>not finished.</h2>
       <div class="beyond__sig">
         <article class="sig" data-s="orbit" data-rv="rise" data-d="1">
           <p class="sig__s"><i></i>Entering orbit</p>
@@ -868,8 +881,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
       <p class="mark" style="justify-content:center"><b>08</b> <span>— Close</span></p>
       <h2 class="d1" data-rv="wipe">What should exist next?</h2>
       <p class="lede dim" data-rv="rise" data-d="1" style="text-align:center">Bring the problem, the half-formed idea, or the thing that already exists and won’t scale. We’ll work out what it takes to get it up — and to keep it there.</p>
-      <!-- TODO: confirm the real address before publishing -->
-      <a class="btn btn--sig" href="mailto:hello@zarixa.in" data-rv="rise" data-d="2"><span>Start a conversation</span><i>→</i></a>
+      <a class="btn btn--sig" href="mailto:zarixainfobytzpvtltd@gmail.com" data-rv="rise" data-d="2"><span>Start a conversation</span><i>→</i></a>
       <img class="cta__mk" id="ctaMark" src="data:image/png;base64,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" alt="" data-rv="rise" data-d="3">
     </div>
   </div>
@@ -900,7 +912,7 @@ body.cur-on .cur,body.cur-on .dot{opacity:1}
     <div class="foot__c">
       <h4>Contact</h4>
       <ul>
-        <li><a href="mailto:hello@zarixa.in">hello@zarixa.in</a></li>
+        <li><a href="mailto:zarixainfobytzpvtltd@gmail.com">zarixainfobytzpvtltd@gmail.com</a></li>
         <li>Bengaluru, Karnataka<br>India</li>
       </ul>
     </div>
